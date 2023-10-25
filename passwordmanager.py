@@ -13,7 +13,7 @@ def ajouter_mot_de_passe():
     else:
         mots_de_passe[nom_du_site] = {'utilisateur': nom_utilisateur, 'mot_de_passe': mot_de_passe}
         print(f"Le mot de passe pour {nom_du_site} a été ajouté avec succès.")
-        sauvegarder_mots_de_passe()  # Sauvegarder les mots de passe
+        sauvegarder_mots_de_passe()
 
 # Fonction pour afficher les mots de passe
 def afficher_mots_de_passe():
@@ -45,7 +45,7 @@ def afficher_mots_de_passe():
     else:
         for site, info in mots_de_passe.items():
             utilisateur = info.get('utilisateur', '')
-            mot_de_passe = info.get('mot_de_passe', '')  # Utilisez 'mot_de passe' pour obtenir la valeur du mot de passe
+            mot_de_passe = info.get('mot_de_passe', '')
             tableau.insert("", "end", values=(site, utilisateur, mot_de_passe))
 
 # Fonction pour rechercher les mots de passe
